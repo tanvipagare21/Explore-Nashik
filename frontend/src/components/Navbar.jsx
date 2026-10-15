@@ -12,8 +12,7 @@ import {
   Heart,
   Menu,
   X,
-  Info,
-  MessageSquare
+  Info
 } from 'lucide-react';
 
 export default function Navbar({ activeTab, setActiveTab, favoriteIdsCount, onOpenSearch }) {
@@ -150,25 +149,6 @@ export default function Navbar({ activeTab, setActiveTab, favoriteIdsCount, onOp
               >
                 <Info className="nav-item-icon" size={14} />
                 <span>About</span>
-              </button>
-
-              <button
-                type="button"
-                className="nav-pill-item"
-                onClick={() => {
-                  if (activeTab !== 'home') {
-                    handleNavClick('home');
-                    setTimeout(() => {
-                      document.getElementById('feedback-section')?.scrollIntoView({ behavior: 'smooth' });
-                    }, 120);
-                  } else {
-                    document.getElementById('feedback-section')?.scrollIntoView({ behavior: 'smooth' });
-                  }
-                }}
-                title="Share feedback or observations"
-              >
-                <MessageSquare className="nav-item-icon" size={14} />
-                <span>Feedback</span>
               </button>
             </div>
           </div>
@@ -313,24 +293,6 @@ export default function Navbar({ activeTab, setActiveTab, favoriteIdsCount, onOp
                   >
                     <Info size={16} />
                     <span>About</span>
-                  </button>
-                  <button
-                    type="button"
-                    className="mobile-nav-link"
-                    onClick={() => {
-                      setMobileMenuOpen(false);
-                      if (activeTab !== 'home') {
-                        handleNavClick('home');
-                        setTimeout(() => {
-                          document.getElementById('feedback-section')?.scrollIntoView({ behavior: 'smooth' });
-                        }, 120);
-                      } else {
-                        document.getElementById('feedback-section')?.scrollIntoView({ behavior: 'smooth' });
-                      }
-                    }}
-                  >
-                    <MessageSquare size={16} />
-                    <span>Feedback</span>
                   </button>
                 </div>
               </div>

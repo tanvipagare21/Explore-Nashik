@@ -1594,18 +1594,23 @@ button {
    RESPONSIVE BREAKPOINTS
    ========================================================================== */
 
-@media (max-width: 1140px) {
+@media (max-width: 1220px) {
   .nav-groups-container {
     gap: 8px;
   }
 
   .nav-pill-item {
-    padding: 6px 9px;
+    padding: 5px 9px;
     font-size: 0.8rem;
+    gap: 4px;
+  }
+
+  .nav-category-tag {
+    font-size: 0.55rem;
   }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1060px) {
   .hero-title {
     font-size: 3rem;
   }
