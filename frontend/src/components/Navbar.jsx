@@ -12,7 +12,8 @@ import {
   Heart,
   Menu,
   X,
-  Info
+  Info,
+  MessageSquare
 } from 'lucide-react';
 
 export default function Navbar({ activeTab, setActiveTab, favoriteIdsCount, onOpenSearch }) {
@@ -147,8 +148,17 @@ export default function Navbar({ activeTab, setActiveTab, favoriteIdsCount, onOp
                 className={`nav-pill-item ${activeTab === 'about' ? 'active' : ''}`}
                 onClick={() => handleNavClick('about')}
               >
-                <Info className="nav-item-icon" size={14} />
+                <Info className="nav-item-icon" size={13} />
                 <span>About</span>
+              </button>
+
+              <button
+                type="button"
+                className={`nav-pill-item ${activeTab === 'feedback' ? 'active' : ''}`}
+                onClick={() => handleNavClick('feedback')}
+              >
+                <MessageSquare className="nav-item-icon" size={13} />
+                <span>Feedback</span>
               </button>
             </div>
           </div>
@@ -293,6 +303,14 @@ export default function Navbar({ activeTab, setActiveTab, favoriteIdsCount, onOp
                   >
                     <Info size={16} />
                     <span>About</span>
+                  </button>
+                  <button
+                    type="button"
+                    className={`mobile-nav-link ${activeTab === 'feedback' ? 'active' : ''}`}
+                    onClick={() => handleNavClick('feedback')}
+                  >
+                    <MessageSquare size={16} />
+                    <span>Feedback</span>
                   </button>
                 </div>
               </div>

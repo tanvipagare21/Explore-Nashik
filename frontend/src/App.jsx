@@ -13,6 +13,7 @@ import FoodPage from './pages/FoodPage';
 import EventsPage from './pages/EventsPage';
 import MyDiscoveriesPage from './pages/MyDiscoveriesPage';
 import AboutPage from './pages/AboutPage';
+import FeedbackPage from './pages/FeedbackPage';
 import { ArrowUp } from 'lucide-react';
 
 import { fetchPlaces, fetchFoods, fetchEvents } from './services/api';
@@ -140,6 +141,8 @@ export default function App() {
         );
       case 'about':
         return <AboutPage />;
+      case 'feedback':
+        return <FeedbackPage />;
       default:
         return null;
     }

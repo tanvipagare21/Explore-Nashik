@@ -25,12 +25,7 @@ export default function Footer({ onNavClick }) {
               <li style={{ cursor: 'pointer', color: 'rgba(255, 255, 255, 0.85)' }} onClick={() => onNavClick('stories')}>Nashik Stories</li>
               <li style={{ cursor: 'pointer', color: 'rgba(255, 255, 255, 0.85)' }} onClick={() => onNavClick('food')}>Taste of Nashik</li>
               <li style={{ cursor: 'pointer', color: 'rgba(255, 255, 255, 0.85)' }} onClick={() => onNavClick('events')}>Culture & Events</li>
-              <li style={{ cursor: 'pointer', color: 'rgba(255, 255, 255, 0.85)' }} onClick={() => {
-                onNavClick('home');
-                setTimeout(() => {
-                  document.getElementById('feedback-section')?.scrollIntoView({ behavior: 'smooth' });
-                }, 100);
-              }}>Share Feedback</li>
+              <li style={{ cursor: 'pointer', color: 'rgba(255, 255, 255, 0.85)' }} onClick={() => onNavClick('feedback')}>Community Feedback</li>
             </ul>
           </div>
 

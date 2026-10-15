@@ -224,7 +224,7 @@ button {
 }
 
 .navbar-floating-card {
-  max-width: 1320px;
+  max-width: 1360px;
   margin: 0 auto;
   background: rgba(250, 247, 239, 0.96);
   backdrop-filter: blur(18px);
@@ -232,11 +232,11 @@ button {
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-float);
-  padding: 8px 18px;
+  padding: 6px 16px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 16px;
+  gap: 12px;
   transition: all 0.4s var(--ease-antigravity);
   will-change: transform, box-shadow;
   transform: translateZ(0);
@@ -294,7 +294,7 @@ button {
 
 .brand-explore {
   font-family: var(--font-heading);
-  font-size: 1.35rem;
+  font-size: 1.25rem;
   font-style: italic;
   font-weight: 500;
   color: var(--color-accent);
@@ -302,16 +302,16 @@ button {
 
 .brand-nashik {
   font-family: var(--font-body);
-  font-size: 1.35rem;
+  font-size: 1.25rem;
   font-weight: 800;
   letter-spacing: -0.5px;
   color: var(--color-primary);
 }
 
 .brand-tagline {
-  font-size: 0.58rem;
+  font-size: 0.52rem;
   font-weight: 700;
-  letter-spacing: 1.4px;
+  letter-spacing: 1.1px;
   color: var(--color-text-muted);
   text-transform: uppercase;
   margin-top: 2px;
@@ -321,7 +321,8 @@ button {
 .nav-groups-container {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 10px;
+  flex-shrink: 1;
 }
 
 .nav-category-group {
@@ -332,36 +333,37 @@ button {
 }
 
 .nav-category-tag {
-  font-size: 0.6rem;
+  font-size: 0.58rem;
   font-weight: 800;
-  letter-spacing: 1.3px;
+  letter-spacing: 1.1px;
   text-transform: uppercase;
   color: var(--color-secondary);
-  padding-left: 6px;
+  padding-left: 5px;
   user-select: none;
 }
 
 .nav-items-cluster {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 3px;
 }
 
 .nav-group-divider {
   width: 1px;
-  height: 30px;
+  height: 26px;
   background-color: var(--color-border);
   opacity: 0.8;
+  margin: 0 1px;
 }
 
 /* Navigation Items (Pills) */
 .nav-pill-item {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  padding: 6px 12px;
+  gap: 5px;
+  padding: 5px 9px;
   border-radius: var(--radius-pill);
-  font-size: 0.84rem;
+  font-size: 0.81rem;
   font-weight: 600;
   color: var(--color-text-dark);
   background: transparent;
@@ -1594,23 +1596,54 @@ button {
    RESPONSIVE BREAKPOINTS
    ========================================================================== */
 
-@media (max-width: 1220px) {
+@media (max-width: 1300px) {
   .nav-groups-container {
     gap: 8px;
   }
 
   .nav-pill-item {
-    padding: 5px 9px;
-    font-size: 0.8rem;
+    padding: 5px 8px;
+    font-size: 0.78rem;
     gap: 4px;
   }
 
   .nav-category-tag {
-    font-size: 0.55rem;
+    font-size: 0.54rem;
   }
 }
 
-@media (max-width: 1060px) {
+@media (max-width: 1180px) {
+  .navbar-floating-card {
+    padding: 6px 12px;
+    gap: 8px;
+  }
+
+  .nav-groups-container {
+    gap: 6px;
+  }
+
+  .nav-pill-item {
+    padding: 4px 7px;
+    font-size: 0.75rem;
+    gap: 3px;
+  }
+
+  .nav-category-tag {
+    font-size: 0.5rem;
+    letter-spacing: 0.8px;
+  }
+
+  .brand-explore,
+  .brand-nashik {
+    font-size: 1.15rem;
+  }
+
+  .brand-tagline {
+    display: none;
+  }
+}
+
+@media (max-width: 1040px) {
   .hero-title {
     font-size: 3rem;
   }
