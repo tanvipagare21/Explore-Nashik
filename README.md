@@ -20,29 +20,6 @@ Explore Nashik is a modern, responsive full-stack web application designed to he
 
 ---
 
-## 🎓 Course Assignment Mapping
-
-| Assignment | Web Technology Topic | Implementation in Project | File Location |
-| :--- | :--- | :--- | :--- |
-| **Assignment 1** | HTML Headings, Lists, Images | Structured typography, imagery, and intro lists | `frontend/src/pages/AboutPage.jsx`, `Home.jsx` |
-| **Assignment 2** | Semantic HTML5 Elements | `<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<footer>` | `App.jsx`, `Navbar.jsx`, `Footer.jsx`, `PlaceCard.jsx` |
-| **Assignment 3** | CSS Styling | External CSS design system + inline styles for cards | `frontend/src/styles/index.css` |
-| **Assignment 4** | Responsive Web Design | CSS Flexbox navbar & CSS Grid places layout + `@media` queries | `index.css` (`.places-grid`, `.navbar-inner`) |
-| **Assignment 5** | CSS Positioning | Sticky navbar, position absolute badges, fixed modal backdrop | `Navbar.jsx`, `PlaceCard.jsx`, `PlaceDetailsModal.jsx` |
-| **Assignment 6** | JavaScript Array Logic | Global Search & Category Filters (`.filter()`, `.map()`, `.includes()`) | `Home.jsx`, `PlacesPage.jsx`, `SearchBar.jsx` |
-| **Assignment 7** | JS Frontend Validation | Real-time feedback form validation (email regex, length limits) | `frontend/src/components/FeedbackForm.jsx` |
-| **Assignment 8** | React SPA Application | Main Explore Nashik Single Page Application | `frontend/src/App.jsx` |
-| **Assignment 9** | React Hooks, Props & State | `useState`, `useEffect`, Props passing, conditional UI rendering | `PlaceCard.jsx`, `CategoryFilter.jsx`, `FactCard.jsx` |
-| **Assignment 10** | Fetch API + JSON Integration | Live Nashik Weather API integration fetching real temperature | `frontend/src/services/weatherApi.js`, `WeatherWidget.jsx` |
-| **Assignment 11** | Vanilla JS DOM Manipulation | Standalone Nashik Fact Generator & live DOM input echo | `vanilla-js/dom-demo.html`, `dom-demo.js` |
-| **Assignment 12** | PHP Authentication & Sessions | Registration, Login, Session storage, `password_verify` | `php/login.php`, `php/register.php`, `php/session.php` |
-| **Assignment 13** | PHP + MySQL CRUD Admin | Admin Dashboard to Add, View, Edit & Delete Places/Food/Events | `php/admin/index.php`, `places_manage.php`, `foods_manage.php` |
-| **Assignment 14** | Node.js + Express Backend | Express server handling JSON body parsing & routing | `backend/server.js`, `backend/config/db.js` |
-| **Assignment 15** | REST API Endpoints | RESTful endpoints: `GET`, `POST`, `PUT`, `DELETE` on `/api/places` | `backend/routes/placesRoutes.js`, `controllers/` |
-| **Assignment 16** | Full Course Project | Integrated Explore Nashik full-stack platform | Complete Project Repository |
-
----
-
 ## 📂 Project Directory Structure
 
 ```text
