@@ -24,3 +24,16 @@ exports.submitFeedback = async (req, res) => {
     res.status(500).json({ error: 'Server Error processing feedback' });
   }
 };
+
+exports.getAllFeedback = async (req, res) => {
+  try {
+    if (db.isMock()) {
+      return res.json(db.mockDb.feedback);
+    }
+    const pool = db.getPool();
+    const [rows] = await pool.query('SELECT * FROM feedback ORDER BY id DESC');
+    res.json(rows);
+  } catch (error) {
+    res.status(500).json({ error: 'Server Error fetching feedback' });
+  }
+};

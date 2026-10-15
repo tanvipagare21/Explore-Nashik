@@ -27,6 +27,7 @@ $feedback_count = $conn->query("SELECT COUNT(*) as cnt FROM feedback")->fetch_as
             <a href="places_manage.php">Manage Places</a>
             <a href="foods_manage.php">Manage Food</a>
             <a href="events_manage.php">Manage Events</a>
+            <a href="feedback_view.php">User Feedback</a>
             <a href="../logout.php" style="color: #FEB2B2;">Logout</a>
         </div>
     </div>
@@ -48,10 +49,10 @@ $feedback_count = $conn->query("SELECT COUNT(*) as cnt FROM feedback")->fetch_as
                 <h3 style="margin: 0; color: #718096; font-size: 0.9rem;">CULTURE & EVENTS</h3>
                 <p style="font-size: 2.2rem; font-weight: 700; margin: 10px 0 0 0; color: #D4A359;"><?php echo $events_count; ?></p>
             </div>
-            <div style="flex: 1; min-width: 200px; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border-top: 4px solid #3182CE;">
+            <a href="feedback_view.php" style="flex: 1; min-width: 200px; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border-top: 4px solid #3182CE; text-decoration: none; color: inherit; display: block;">
                 <h3 style="margin: 0; color: #718096; font-size: 0.9rem;">USER FEEDBACKS</h3>
                 <p style="font-size: 2.2rem; font-weight: 700; margin: 10px 0 0 0; color: #3182CE;"><?php echo $feedback_count; ?></p>
-            </div>
+            </a>
         </div>
 
         <h2 style="margin-top: 40px;">Quick Actions</h2>

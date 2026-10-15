@@ -116,7 +116,26 @@ const mockDb = {
       image: "https://upload.wikimedia.org/wikipedia/commons/4/4e/Festival_Chariot%2C_Rath_Yatra%2C_Kaleshwar_Devasthan%2C_Maharashtra.jpg"
     }
   ],
-  feedback: []
+  feedback: [
+    {
+      id: 1,
+      name: "Aarav Mehta",
+      email: "aarav@example.com",
+      favorite_place: "Pandavleni Caves",
+      rating: 5,
+      message: "Loved learning about the ancient 1st century rock cut architecture of Nashik!",
+      submitted_at: new Date().toISOString()
+    },
+    {
+      id: 2,
+      name: "Priya Sharma",
+      email: "priya@example.com",
+      favorite_place: "Sula Vineyards",
+      rating: 5,
+      message: "Great cultural guide! The hidden gems section helped us discover the Coin Museum.",
+      submitted_at: new Date().toISOString()
+    }
+  ]
 };
 
 async function initDb() {
