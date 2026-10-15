@@ -10,7 +10,6 @@ import {
   Calendar,
   Bookmark,
   Heart,
-  Code,
   Menu,
   X,
   Info
@@ -176,19 +175,7 @@ export default function Navbar({ activeTab, setActiveTab, favoriteIdsCount, onOp
             )}
           </button>
 
-          {/* Utility: Node API Only (PHP button completely removed) */}
-          <div className="nav-utility-actions">
-            <a
-              href="http://localhost:5001"
-              target="_blank"
-              rel="noreferrer"
-              className="util-btn util-btn-outlined"
-              title="Inspect Node.js REST API Server"
-            >
-              <Code size={13} className="util-btn-icon" />
-              <span>Node API</span>
-            </a>
-          </div>
+
 
           {/* Mobile Hamburger Button */}
           <button
@@ -310,21 +297,7 @@ export default function Navbar({ activeTab, setActiveTab, favoriteIdsCount, onOp
                 </div>
               </div>
 
-              {/* UTILITY (PHP button removed) */}
-              <div className="mobile-nav-block mobile-nav-utility">
-                <span className="mobile-section-label">UTILITY</span>
-                <div className="mobile-utility-row">
-                  <a
-                    href="http://localhost:5001"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="mobile-util-btn mobile-util-outlined"
-                  >
-                    <Code size={14} />
-                    <span>Node API</span>
-                  </a>
-                </div>
-              </div>
+
             </div>
           </div>
         </div>
