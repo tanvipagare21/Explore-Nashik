@@ -191,7 +191,7 @@ export default function Home({
       </section>
 
       {/* 12. Feedback Form Section */}
-      <section className="section" style={{ background: 'white' }}>
+      <section id="feedback-section" className="section" style={{ background: 'white', scrollMarginTop: 80 }}>
         <div className="container">
           <FeedbackForm />
         </div>

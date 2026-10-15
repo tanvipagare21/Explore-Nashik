@@ -1,6 +1,6 @@
 // FeedbackForm Component (Assignment 7 & 14)
 import React, { useState } from 'react';
-import { Star, Send, CheckCircle2, AlertCircle } from 'lucide-react';
+import { Star, Send, CheckCircle2, AlertCircle, Database, ExternalLink } from 'lucide-react';
 import { submitFeedbackApi } from '../services/api';
 
 export default function FeedbackForm() {
@@ -61,20 +61,59 @@ export default function FeedbackForm() {
   };
 
   return (
-    <div style={{ background: 'white', borderRadius: 20, padding: 36, boxShadow: 'var(--shadow-lg)', border: '1px solid var(--color-border)', maxWidth: 640, margin: '0 auto' }}>
-      <h3 style={{ fontSize: '1.6rem', color: 'var(--color-primary)', marginBottom: 8 }}>Share Your Nashik Discovery Experience</h3>
-      <p style={{ color: '#718096', marginBottom: 28, fontSize: '0.95rem' }}>
-        Help us expand our guide with your personal observations and favorite spots across Nashik.
-      </p>
+    <div style={{ background: 'white', borderRadius: 20, padding: 36, boxShadow: 'var(--shadow-lg)', border: '1px solid var(--color-border)', maxWidth: 680, margin: '0 auto' }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: 16, marginBottom: 20 }}>
+        <div style={{ flex: '1 1 300px' }}>
+          <h3 style={{ fontSize: '1.6rem', color: 'var(--color-primary)', marginBottom: 6 }}>Share Your Nashik Discovery Experience</h3>
+          <p style={{ color: '#718096', margin: 0, fontSize: '0.95rem' }}>
+            Help us expand our guide with your personal observations and favorite spots across Nashik.
+          </p>
+        </div>
+        <a
+          href="http://localhost:5001/admin/feedback"
+          target="_blank"
+          rel="noreferrer"
+          title="Open live feedback database table"
+          style={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: 6,
+            padding: '8px 14px',
+            borderRadius: 8,
+            background: 'rgba(168, 67, 36, 0.08)',
+            border: '1px solid var(--color-primary)',
+            color: 'var(--color-primary)',
+            fontSize: '0.85rem',
+            fontWeight: 600,
+            textDecoration: 'none',
+            whiteSpace: 'nowrap'
+          }}
+        >
+          <Database size={15} />
+          View All Responses <ExternalLink size={13} />
+        </a>
+      </div>
 
       {isSubmitted ? (
         <div style={{ background: '#C6F6D5', color: '#22543D', padding: 24, borderRadius: 12, textAlign: 'center' }}>
           <CheckCircle2 style={{ width: 44, height: 44, margin: '0 auto 12px auto' }} />
           <h4 style={{ margin: '0 0 4px 0', fontSize: '1.2rem' }}>Thank You for Your Feedback!</h4>
-          <p style={{ margin: 0, fontSize: '0.9rem' }}>Your insights have been successfully submitted.</p>
-          <button className="btn btn-outline" style={{ marginTop: 16 }} onClick={() => setIsSubmitted(false)}>
-            Submit Another Response
-          </button>
+          <p style={{ margin: 0, fontSize: '0.9rem' }}>Your insights have been successfully submitted to the database.</p>
+          <div style={{ display: 'flex', gap: 12, justifyContent: 'center', marginTop: 18, flexWrap: 'wrap' }}>
+            <button className="btn btn-outline" onClick={() => setIsSubmitted(false)}>
+              Submit Another Response
+            </button>
+            <a
+              href="http://localhost:5001/admin/feedback"
+              target="_blank"
+              rel="noreferrer"
+              className="btn btn-primary"
+              style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 6 }}
+            >
+              <Database size={16} />
+              View Your Submitted Response <ExternalLink size={14} />
+            </a>
+          </div>
         </div>
       ) : (
         <form onSubmit={handleSubmit} noValidate>

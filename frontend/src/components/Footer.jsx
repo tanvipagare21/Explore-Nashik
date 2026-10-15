@@ -25,6 +25,12 @@ export default function Footer({ onNavClick }) {
               <li style={{ cursor: 'pointer', color: 'rgba(255, 255, 255, 0.85)' }} onClick={() => onNavClick('stories')}>Nashik Stories</li>
               <li style={{ cursor: 'pointer', color: 'rgba(255, 255, 255, 0.85)' }} onClick={() => onNavClick('food')}>Taste of Nashik</li>
               <li style={{ cursor: 'pointer', color: 'rgba(255, 255, 255, 0.85)' }} onClick={() => onNavClick('events')}>Culture & Events</li>
+              <li style={{ cursor: 'pointer', color: 'rgba(255, 255, 255, 0.85)' }} onClick={() => {
+                onNavClick('home');
+                setTimeout(() => {
+                  document.getElementById('feedback-section')?.scrollIntoView({ behavior: 'smooth' });
+                }, 100);
+              }}>Share Feedback</li>
             </ul>
           </div>
 
@@ -44,6 +50,11 @@ export default function Footer({ onNavClick }) {
               <li>
                 <a href="http://localhost:5001/api/places" target="_blank" rel="noreferrer" style={{ color: 'white', display: 'flex', alignItems: 'center', gap: 4 }}>
                   Assignment 14 & 15: Node REST API <ExternalLink size={12} />
+                </a>
+              </li>
+              <li>
+                <a href="http://localhost:5001/admin/feedback" target="_blank" rel="noreferrer" style={{ color: '#FBD38D', fontWeight: 600, display: 'flex', alignItems: 'center', gap: 4 }}>
+                  Feedback Responses Table <ExternalLink size={12} />
                 </a>
               </li>
             </ul>
