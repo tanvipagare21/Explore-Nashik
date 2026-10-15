@@ -1,0 +1,23 @@
+{
+  "name": "wtl-project-explore-nashik",
+  "version": "1.0.0",
+  "description": "Explore Nashik — Discover the City Beyond the Tourist Spots",
+  "main": "start.js",
+  "scripts": {
+    "start": "node start.js",
+    "dev": "node start.js",
+    "frontend": "npm --prefix frontend run dev",
+    "backend": "npm --prefix backend start",
+    "install:all": "npm --prefix backend install && npm --prefix frontend install",
+    "build": "npm --prefix frontend run build"
+  },
+  "keywords": [
+    "react",
+    "vite",
+    "express",
+    "nashik",
+    "wtl"
+  ],
+  "author": "",
+  "license": "ISC"
+}

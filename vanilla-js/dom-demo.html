@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nashik Fact Generator - DOM Manipulation Demo (Assignment 11)</title>
+    <style>
+        :root {
+            --bg-color: #FAF7F2;
+            --text-color: #2D3748;
+            --card-bg: #FFFFFF;
+            --primary: #1C3D2F;
+            --accent: #C85A32;
+            --border: #E2E8F0;
+        }
+
+        body.dark-mode {
+            --bg-color: #1A202C;
+            --text-color: #F7FAFC;
+            --card-bg: #2D3748;
+            --primary: #81E6D9;
+            --accent: #F6AD55;
+            --border: #4A5568;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 40px 20px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 700px;
+            width: 100%;
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 32px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            border: 1px solid var(--border);
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 16px;
+            margin-bottom: 24px;
+        }
+
+        h1 {
+            font-size: 1.6rem;
+            color: var(--primary);
+            margin: 0;
+        }
+
+        .badge {
+            background: var(--accent);
+            color: white;
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 4px 12px;
+            border-radius: 20px;
+        }
+
+        .fact-card {
+            background: rgba(0,0,0,0.03);
+            border-left: 4px solid var(--accent);
+            padding: 24px;
+            border-radius: 8px;
+            margin-bottom: 24px;
+            min-height: 120px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        #fact-text {
+            font-size: 1.15rem;
+            line-height: 1.6;
+            margin: 0 0 12px 0;
+        }
+
+        .fact-meta {
+            font-size: 0.85rem;
+            opacity: 0.75;
+            font-weight: 600;
+        }
+
+        .controls {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        button {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.2s ease, opacity 0.2s ease;
+        }
+
+        button:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+
+        button.secondary {
+            background-color: transparent;
+            color: var(--text-color);
+            border: 1px solid var(--border);
+        }
+
+        .counter-box {
+            margin-top: 24px;
+            padding-top: 16px;
+            border-top: 1px dashed var(--border);
+            font-size: 0.9rem;
+            color: var(--text-color);
+            opacity: 0.8;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .search-demo {
+            margin-top: 20px;
+        }
+
+        .search-demo input {
+            width: 100%;
+            padding: 12px;
+            box-sizing: border-box;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            background: var(--card-bg);
+            color: var(--text-color);
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Nashik Fact Generator</h1>
+            <span class="badge">Assignment 11: Vanilla JS DOM</span>
+        </div>
+
+        <p>Demonstrates core DOM manipulation methods: <code>getElementById</code>, <code>querySelector</code>, <code>textContent</code>, <code>classList</code>, and <code>addEventListener</code>.</p>
+
+        <div class="search-demo">
+            <input type="text" id="live-input" placeholder="Type to interact live with DOM text..." />
+            <p id="live-output" style="margin-top: 8px; font-weight: 500; min-height: 24px; color: var(--accent);"></p>
+        </div>
+
+        <div class="fact-card" id="fact-box">
+            <p id="fact-text">Click the button below to generate an interesting fact about Nashik!</p>
+            <span class="fact-meta" id="fact-category">Category: Discovery</span>
+        </div>
+
+        <div class="controls">
+            <button id="next-fact-btn">Show Another Fact →</button>
+            <button id="toggle-theme-btn" class="secondary">Toggle Dark Mode</button>
+        </div>
+
+        <div class="counter-box">
+            <span>Facts Viewed: <strong id="fact-counter">0</strong></span>
+            <span>Total Facts Available: <strong id="total-facts">0</strong></span>
+        </div>
+    </div>
+
+    <script src="dom-demo.js"></script>
+</body>
+</html>
